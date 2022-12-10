@@ -1,0 +1,90 @@
+kobe [ ~ ]$ az aro create \
+  --resource-group $RESOURCEGROUP \
+  --name $CLUSTER \
+  --vnet aro-vnet \
+  --master-subnet master-subnet \
+  --worker-subnet worker-subnet
+  --pull-secret @/home/kobe/pull-secret.txt
+\No --pull-secret provided: cluster will not include samples or operators from Red Hat or from certified partners.
+{
+  "apiserverProfile": {
+    "ip": "20.214.140.197",
+    "url": "https://api.rufrtti6.koreacentral.aroapp.io:6443/",
+    "visibility": "Public"
+  },
+  "clusterProfile": {
+    "domain": "rufrtti6",
+    "fipsValidatedModules": "Disabled",
+    "pullSecret": null,
+    "resourceGroupId": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourcegroups/aro-rufrtti6",
+    "version": "4.10.20"
+  },
+  "consoleProfile": {
+    "url": "https://console-openshift-console.apps.rufrtti6.koreacentral.aroapp.io/"
+  },
+  "id": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourceGroups/aro-rg/providers/Microsoft.RedHatOpenShift/openShiftClusters/test-cluster",
+  "ingressProfiles": [
+    {
+      "ip": "20.214.140.3",
+      "name": "default",
+      "visibility": "Public"
+    }
+  ],
+  "location": "koreacentral",
+  "masterProfile": {
+    "diskEncryptionSetId": null,
+    "encryptionAtHost": "Disabled",
+    "subnetId": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourceGroups/aro-rg/providers/Microsoft.Network/virtualNetworks/aro-vnet/subnets/master-subnet",
+    "vmSize": "Standard_D8s_v3"
+  },
+  "name": "test-cluster",
+  "networkProfile": {
+    "podCidr": "10.128.0.0/14",
+    "serviceCidr": "172.30.0.0/16"
+  },
+  "provisioningState": "Succeeded",
+  "resourceGroup": "aro-rg",
+  "servicePrincipalProfile": {
+    "clientId": "19d5ec65-3211-4005-a302-8feca64a9d93",
+    "clientSecret": null
+  },
+  "systemData": {
+    "createdAt": "2022-12-10T17:18:11.364094+00:00",
+    "createdBy": "perezkobe15@gmail.com",
+    "createdByType": "User",
+    "lastModifiedAt": "2022-12-10T17:18:11.364094+00:00",
+    "lastModifiedBy": "perezkobe15@gmail.com",
+    "lastModifiedByType": "User"
+  },
+  "tags": null,
+  "type": "Microsoft.RedHatOpenShift/openShiftClusters",
+  "workerProfiles": [
+    {
+      "count": 1,
+      "diskEncryptionSetId": null,
+      "diskSizeGb": 128,
+      "encryptionAtHost": "Disabled",
+      "name": "test-cluster-b87tb-worker-koreacentral1",
+      "subnetId": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourceGroups/aro-rg/providers/Microsoft.Network/virtualNetworks/aro-vnet/subnets/worker-subnet",
+      "vmSize": "Standard_D4s_v3"
+    },
+    {
+      "count": 1,
+      "diskEncryptionSetId": null,
+      "diskSizeGb": 128,
+      "encryptionAtHost": "Disabled",
+      "name": "test-cluster-b87tb-worker-koreacentral2",
+      "subnetId": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourceGroups/aro-rg/providers/Microsoft.Network/virtualNetworks/aro-vnet/subnets/worker-subnet",
+      "vmSize": "Standard_D4s_v3"
+    },
+    {
+      "count": 1,
+      "diskEncryptionSetId": null,
+      "diskSizeGb": 128,
+      "encryptionAtHost": "Disabled",
+      "name": "test-cluster-b87tb-worker-koreacentral3",
+      "subnetId": "/subscriptions/ecc48ad9-fb33-48de-a3ef-83759f6825d0/resourceGroups/aro-rg/providers/Microsoft.Network/virtualNetworks/aro-vnet/subnets/worker-subnet",
+      "vmSize": "Standard_D4s_v3"
+    }
+  ]
+}
